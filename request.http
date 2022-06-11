@@ -1,0 +1,30 @@
+POST http://localhost:4002/cadastro
+content-type: application/json
+
+{
+    "nome" : "Nicolas Gonçalves Jerônimo",
+    "endereco" : "Osasco",
+    "idade" : "21"
+}
+###
+
+GET http://localhost:4002/usuarios
+
+###
+
+GET http://localhost:4002/usuarios/29888a79-9b9b-41be-8131-ee0de3c06d27
+
+###
+
+PUT http://localhost:4002/usuarios/8d04e6ab-fa59-44a5-85ea-a055da39d334
+content-type: application/json
+
+{
+    "nome" : "Karolaine Santos Jerônimo",
+    "endereco" : "Osasco",
+    "idade" : "20"
+}
+
+###
+
+DELETE http://localhost:4002/usuarios/8186a7ee-168a-4855-90e8-d021a118c6f1

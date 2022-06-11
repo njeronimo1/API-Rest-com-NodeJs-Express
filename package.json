@@ -1,0 +1,16 @@
+{
+  "name": "api_rocketset",
+  "version": "1.0.0",
+  "description": "Primeira api teste",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start" : "nodemon app.js"
+  },
+  "author": "Nicolas Jerônimo",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
