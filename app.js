@@ -78,6 +78,10 @@ app.delete('/usuarios/:id_root', (req, res) => {
     
 });
 
+app.get('/', (req, res) => {
+    res.send("Use as rotas: /usuarios, /usuarios/id_do_usuario");
+});
+
 function userFilesDB(){
     fs.writeFile("usuarios.json", JSON.stringify(usuarios), (err) =>{
         if(err){
