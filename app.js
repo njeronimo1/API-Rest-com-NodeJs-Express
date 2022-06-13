@@ -19,6 +19,12 @@ fs.readFile("usuarios.json", "UTF-8", (err, data) => {
     };
 });
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
 /* Insert de um usuario */
 
 app.post('/cadastro', (req, res) => {
@@ -39,9 +45,9 @@ app.post('/cadastro', (req, res) => {
 });
 
 app.get('/usuarios', (req, res) => {
-    return res.json({
-        data: usuarios
-    });
+    return res.json(
+        usuarios
+    );
 });
 
 app.get('/usuarios/:id_root', (req, res) => {
