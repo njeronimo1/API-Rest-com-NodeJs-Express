@@ -5,6 +5,10 @@ const fs = require('fs');
 
 const app = express();
 
+var cors = require('cors')
+
+app.use(cors()) // Use this after the variable declaration
+
 const port = process.env.PORT || 4002;
 
 app.use(express.json());
@@ -58,7 +62,7 @@ app.get('/usuarios/:id_root', (req, res) => {
 
 app.put('/usuarios/:id_root', (req, res) => {
     const { id_root } = req.params;
-    const { nome, endereco,idade} =req.body;
+    const { nome, endereco,idade} = req.body;
     const usuarioIndex = usuarios.findIndex(user => user.id === id_root);
     usuarios[usuarioIndex] = {
         ...usuarios[usuarioIndex],
